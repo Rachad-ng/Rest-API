@@ -106,6 +106,13 @@ public class CategoryController {
             LOGGER.error(e.getMessage());
 
             return ResponseEntity.badRequest().body(e.getMessage());
+
+        }catch (Exception e){
+
+            LOGGER.error(e.getMessage());
+
+            return ResponseEntity.badRequest().body(e.getMessage());
+
         }
 
     }

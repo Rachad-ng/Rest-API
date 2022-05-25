@@ -11,6 +11,7 @@ import javax.validation.constraints.*;
 @Entity
 @Table(name = "product")
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -39,6 +40,8 @@ public class Product {
     private int amount;
 
     @ManyToOne
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
